@@ -1,20 +1,24 @@
 # Task Tracker CLI
 
-A simple command-line tool to track tasks, built with plain Python (no external dependencies). Tasks are stored in `tasks.json` in the current directory.
+A simple command-line tool to track tasks, built with plain Java (no external dependencies — JSON reading/writing is hand-rolled). Tasks are stored in `tasks.json` in the current directory.
 
 Project idea: https://roadmap.sh/projects/task-tracker
 
 ## Requirements
 
-- Python 3.7+
+- JDK 17+
 
 ## Usage
 
-Run via `python3 task_cli.py <command> [args]`. Optionally make it executable and alias it as `task-cli`:
+```bash
+javac TaskCli.java
+java TaskCli <command> [args]
+```
+
+Optionally alias it as `task-cli`:
 
 ```bash
-chmod +x task_cli.py
-alias task-cli="python3 $(pwd)/task_cli.py"
+alias task-cli="java -cp $(pwd) TaskCli"
 ```
 
 ### Commands
